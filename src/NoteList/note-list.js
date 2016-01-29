@@ -40,10 +40,11 @@ var _NoteList = React.createClass({
     var obj_id = uuid.v4();
     var obj = {   
       id: obj_id,
-      text: ' ',
+      text: '',
       order: Object.keys(this.state.notes).length,
       tags: [],
       fields:[],
+      geojson_visible: 'Show',
     };
     console.log(this);
     this.cursors.notes.set(obj_id, obj);
@@ -89,7 +90,7 @@ var _NoteList = React.createClass({
       <div className="note-list">
         <SortingTabs/>
         <div className="notes-container">{notes_array} </div>
-        <button type= "button" onClick={this.addNote} className="add-note-button">
+        <button type="button" onClick={this.addNote} className="add-note-button">
           Add Note
         </button>
       </div>
