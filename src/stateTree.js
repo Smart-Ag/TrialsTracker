@@ -19,7 +19,8 @@ var tree = new Baobab({
     tags_modal_note_id: {},
     tags_modal_completions: [],
     sort_mode: 'all', //'all' 'fields' 'tags'
-    map: {$isLoading: true}, 
+    map: {$isLoading: true},
+    edittingTags: false, 
   }
 }); 
 
@@ -52,7 +53,7 @@ function initial_notes() {
       var text = 'low area';
       note = {
         text: 'drown out; replanted 6/18/2015',
-        tags: {text: {text:text}},
+        tags: {},
         fields: ['Smith40'],
         geojson: { "type": "Polygon",
           "coordinates": [
